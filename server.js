@@ -14,6 +14,11 @@ mongoose.connect(process.env.MONGO_URI, {
 }).then(() => console.log("MongoDB connected"))
   .catch(err => console.log("DB Error:", err));
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('MUN Panel Backend is running 🚀');
+});
+
 app.get('/api/registrations', async (req, res) => {
   const registrations = await Registration.find().sort({ createdAt: -1 });
   res.json(registrations);
