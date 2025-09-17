@@ -11,6 +11,8 @@ const RegistrationSchema = new mongoose.Schema({
   accommodationRequired: Boolean,
   agreeToTerms: Boolean,
   previousExperience: String,
+  allocatedCommittee: String,
+  allocatedCountry: String,
   createdAt: Date,
   updatedAt: Date
 });
